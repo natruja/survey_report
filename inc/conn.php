@@ -1,8 +1,8 @@
 <?php 
-		$user = "root";
-		$pass = "";
+		$user = "rxsys";
+		$pass = "ssSS$$55";
 		try {
-		    $dbh = new PDO('mysql:host=127.0.0.1;dbname=survey', $user, $pass, array(
+		    $dbh = new PDO('mysql:host=10.11.22.33;dbname=survey', $user, $pass, array(
     																		PDO::ATTR_PERSISTENT => true,
     																		PDO::ATTR_ERRMODE    => PDO::ERRMODE_EXCEPTION));
 		} catch (PDOException $e) {

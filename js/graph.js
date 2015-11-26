@@ -28,9 +28,9 @@
 				            depth: 45,
 				            cursor: 'pointer',
 				            dataLabels: {
-				                enabled: true,
-				                color: '#000000',
-				                connectorColor: '#000000',
+				                // enabled: true,
+				                // color: '#000000',
+				                // connectorColor: '#000000',
 				                formatter: function() {
 				                    return '<b>'+ this.point.name +'</b>: '+ Highcharts.numberFormat(this.percentage, 2)+' %';
 				                }
@@ -75,9 +75,9 @@
 				            depth: 45,
 				            cursor: 'pointer',
 				            dataLabels: {
-				                enabled: true,
-				                color: '#000000',
-				                connectorColor: '#000000',
+				                // enabled: true,
+				                // color: '#000000',
+				                // connectorColor: '#000000',
 				                formatter: function() {
 				                    return '<b>'+ this.point.name +'</b>: '+ Highcharts.numberFormat(this.percentage, 2)+' %';
 				                }
@@ -91,6 +91,7 @@
                               data: []
                              
                         }]
+                        
                  }				 
                  $.getJSON("user_useinter.php", function(data) {
 	                chart_new.series[0].data = data;
@@ -124,9 +125,9 @@
 				            depth: 45,
 				            cursor: 'pointer',
 				            dataLabels: {
-				                enabled: true,
-				                color: '#000000',
-				                connectorColor: '#000000',
+				                // enabled: true,
+				                // color: '#000000',
+				                // connectorColor: '#000000',
 				                formatter: function() {
 				                    return '<b>'+ this.point.name +'</b>: '+ Highcharts.numberFormat(this.percentage, 2)+' %';
 				                }
@@ -174,9 +175,9 @@
 				            depth: 45,
 				            cursor: 'pointer',
 				            dataLabels: {
-				                enabled: true,
-				                color: '#000000',
-				                connectorColor: '#000000',
+				                // enabled: true,
+				                // color: '#000000',
+				                // connectorColor: '#000000',
 				                formatter: function() {
 				                    return '<b>'+ this.point.name +'</b>: '+ Highcharts.numberFormat(this.percentage, 2)+' %';
 				                }
@@ -194,6 +195,56 @@
                  $.getJSON("user_not_bbb.php", function(data) {
 	                not_3bb.series[0].data = data;
 	                user_use = new Highcharts.Chart(not_3bb);           
+	            }); 
+
+
+                var  all_value =  {
+	          			chart: {
+        			  	renderTo: 'all-contact',
+			            plotBackgroundColor: null,
+		                plotBorderWidth:  null,
+		                plotShadow: false,
+			            options3d: {
+			                enabled: true,
+			                alpha: 30,
+			                beta: 0
+		            	}
+			        },
+            		 title: {
+                			text: 'ภาพรวมการติดต่อลูกค้า' //
+           			 },
+           			 tooltip: {
+				        formatter: function() {
+				            return '<b>'+ this.point.name +'</b>: '+ Highcharts.numberFormat(this.percentage, 2)+' %';
+				        }
+				    },
+           			plotOptions: {
+				        pie: {
+				            allowPointSelect: true,
+				            innerSize: 100,
+				            depth: 45,
+				            cursor: 'pointer',
+				            dataLabels: {
+				                // enabled: true,
+				                // color: '#000000',
+				                // connectorColor: '#000000',
+				                formatter: function() {
+				                    return '<b>'+ this.point.name +'</b>: '+ Highcharts.numberFormat(this.percentage, 2)+' %';
+				                }
+				            },
+				             showInLegend: true
+				        }
+				    },
+           			 series: [{
+           		 			  type: 'pie',
+                              name: 'ข้อมูลการโทร',
+                              data: []
+                             
+                        }]
+                 }				 
+                 $.getJSON("all_contact.php", function(data) {
+	                all_value.series[0].data = data;
+	                user_use = new Highcharts.Chart(all_value);           
 	            }); 
 	                      
   });   

@@ -21,7 +21,7 @@
 		 			$jsonData[] = array('name' => 'True', 'y' =>$value['true'], 'color' => "#cc0000");	
 		 			$jsonData[] = array('name' => 'TOT', 'y' =>$value['tot'], 'color' => "#66ffff");	
 		 			$jsonData[] = array('name' => 'Other', 'y' =>$value['other'], 'color' => "#003300");
-		 			$jsonData[] = array('name' => 'Blank', 'y' =>$value['other'], 'color' => "#F781F3");			 	 
+		 			$jsonData[] = array('name' => 'Blank', 'y' =>$value['blank'], 'color' => "#F781F3");			 	 
 			} 
 			
 		 print_r(json_encode($jsonData, JSON_NUMERIC_CHECK));
