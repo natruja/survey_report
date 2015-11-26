@@ -5,8 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<title></title>
+	<title>Report</title>
 	<script src="jquery/jquery.js"></script>
 	<script src="bootstrap/dist/js/bootstrap.min.js" type="text/javascript" ></script>
 	<script src="js/highcharts.js"></script>
@@ -204,6 +203,9 @@
   				</div>
   			</div>
 		</div>
+
+
+
 	<div class="row">
 		<div class="col-lg-8 col-md-12">
 			<div class="panel panel-success">
@@ -318,6 +320,9 @@
   				</div>
 		</div>
 	</div>
+
+
+
 	<div class="row">
 		<div class="col-lg-8 col-md-12">
 			<div class="panel panel-info">
@@ -371,7 +376,7 @@
 								<td><b>คิดเป็น</b></td>
 							</tr>
 							<tr>
-								<td><font color="red"><u>ต้อง</u></font> การอัพสปีด</td>
+								<td><font color="red"><u><a href="upspeed.php" target="_blank">ต้อง</a></u></font> การอัพสปีด</td>
 								<td><?php echo $Yes_value ?></td>
 								<td><?php echo $per_up_ye; ?>%</td>
 							</tr>
@@ -397,6 +402,9 @@
   				</div>
 		</div>
 	</div>
+
+
+
 	<div class="row">
 		<div class="col-lg-8 col-md-12">
 			<div class="panel panel-info">
@@ -451,7 +459,7 @@
 								<td><b>คิดเป็น</b></td>
 							</tr>
 							<tr>
-								<td><font color="red"><u>ต้อง</u></font> กลับมาใช้งานใหม่</td>
+								<td><font color="red"><u><a href="other_isp.php" target="_blank">ต้อง</a></u></font> กลับมาใช้งานใหม่</td>
 								<td><?php echo $Yes_value ?></td>
 								<td><?php echo $per_up_ye; ?>%</td>
 							</tr>
@@ -477,12 +485,6 @@
   				</div>
 		</div>
 	</div>
-
-
-
-</div>
-		
-
-	 
+</div>	 
 </body>
 </html>
